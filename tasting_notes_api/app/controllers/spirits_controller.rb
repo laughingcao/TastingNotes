@@ -46,6 +46,6 @@ class SpiritsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def spirit_params
-      params.require(:spirit).permit(:name)
+      params.require(:spirit).permit(:name, :abv, :spirit, :origin)
     end
 end
