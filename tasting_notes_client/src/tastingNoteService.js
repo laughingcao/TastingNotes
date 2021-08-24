@@ -1,4 +1,5 @@
 class TastingNoteService{
+
     constructor(endpoint){
         this.endpoint = endpoint
     }
@@ -7,7 +8,7 @@ class TastingNoteService{
         fetch(`${this.endpoint}/tasting_notes`)
         .then(resp => resp.json())
         .then(tastingNotes => {
-               debugger
-        })
+               
+        }) 
     }
 }

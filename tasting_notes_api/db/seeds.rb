@@ -6,14 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-spirits = Spirit.create([
-        { name:'Buffalo Trace', origin:'USA', abv: '45', spirit: 'Bourbon' },
-        { name:'Monkey 47', origin:'Germany', abv: '47', spirit: 'Gin' },
-        { name:'Tapatio Blanco', origin:'Mexico', abv: '40', spirit: 'tequila' }
+Spirit.create([
+        {name: "Buffalo Trace", origin: "USA", abv: "45", spirit: "Bourbon"},
+        {name: "Monkey 47", origin: "Germany", abv: "47", spirit: "Gin" },
+        {name: "Tapatio Blanco", origin: "Mexico", abv: "40", spirit: "tequila"},
 ])
 
-tasting_notes = TastingNote.create([
-    {tasting_note: 'Orange Peels' },
-    {tasting_note: 'Vanilla' },
-    {tasting_note: 'Cherry' }
-    ])
+vanilla = TastingNote.create(tasting_note: 'vanilla')
+cherry = TastingNote.create(tasting_note: 'cherry')
+orange = TastingNote.create(tasting_note: 'orange')
