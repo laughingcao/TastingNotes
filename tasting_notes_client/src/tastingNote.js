@@ -6,7 +6,7 @@ class TastingNote {
     constructor(id, tasting_note, spirit_id) {
         this.id = id
         this.tasting_note = tasting_note
-        this.spirit_id
+        this.spirit_id = spirit_id
 
         this.element = document.createElement('li')
         this.element.dataset.id = this.id
@@ -16,6 +16,15 @@ class TastingNote {
     }
 
     tastingNoteHTML(){
+        this.element.innerHTML += `
+        <div>
+            <h3>${this.tasting_note}</h3>
+        </div>
+        `
+        return this.element
+    }
 
+    slapOnDom(){
+        TastingNote.tastingNoteContainer.appendChild(tastingNoteHTML)
     }
 }
