@@ -12,6 +12,12 @@ Spirit.create([
         {name: "Tapatio Blanco", origin: "Mexico", abv: "40", spirit: "tequila"},
 ])
 
-vanilla = TastingNote.create(tasting_note: 'vanilla')
-cherry = TastingNote.create(tasting_note: 'cherry')
-orange = TastingNote.create(tasting_note: 'orange')
+TastingNote.create(tasting_note: 'vanilla')
+TastingNote.create(tasting_note: 'cherry')
+TastingNote.create(tasting_note: 'orange')
+
+TastingNote.create([
+        {tasting_note: 'vanilla'},
+        {tasting_note: 'cherry'},
+        {tasting_note: 'orange'},
+])

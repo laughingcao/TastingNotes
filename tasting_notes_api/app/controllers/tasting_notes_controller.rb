@@ -46,6 +46,6 @@ class TastingNotesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def tasting_note_params
-      params.require(:tasting_note.permit(:tasting_note)
+      params.require(:tasting_note.permit(:tasting_note, :spirit_id))
     end
 end

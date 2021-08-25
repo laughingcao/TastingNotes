@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2021_08_19_045028) do
 
   create_table "tasting_notes", force: :cascade do |t|
     t.string "tasting_note"
+    t.integer "spirit_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
