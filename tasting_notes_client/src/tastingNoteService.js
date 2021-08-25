@@ -10,6 +10,7 @@ class TastingNoteService{
         .then(tastingNotes => {
             for (const tastingNote of tastingNotes) {
                 const t = new TastingNote(tastingNote)
+                t.slapOnDom()
             }
         }) 
     }

@@ -1,9 +1,9 @@
 class TastingNote {
 
     static all = []
-    static TastingNoteContainer = document.getElementById("tastingnotes-contrainer")
+    static tastingNoteContainer = document.getElementById("tastingnotes-contrainer")
 
-    constructor(id, tasting_note, spirit_id) {
+    constructor({id, tasting_note, spirit_id}) {
         this.id = id
         this.tasting_note = tasting_note
         this.spirit_id = spirit_id
@@ -25,6 +25,6 @@ class TastingNote {
     }
 
     slapOnDom(){
-        TastingNote.tastingNoteContainer.appendChild(tastingNoteHTML)
+        TastingNote.tastingNoteContainer.append(this.tastingNoteHTML())
     }
 }
