@@ -14,4 +14,11 @@ class TastingNoteService{
             }
         }) 
     }
+
+    createTastingNote(){
+        const tastingNote = {
+            tasting_note: document.getElementById('tasting_note').value
+            spirit_id: 1
+        }
+    }
 }
