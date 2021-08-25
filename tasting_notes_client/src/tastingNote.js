@@ -1,7 +1,7 @@
 class TastingNote {
 
     static all = []
-    static 
+    static TastingNoteContainer = document.getElementById("tastingnotes-contrainer")
 
     constructor(id, tasting_note, spirit_id) {
         this.id = id
@@ -13,5 +13,9 @@ class TastingNote {
         this.element.id = `tastingNote-${this.id}`
 
         TastingNote.all.push(this)
+    }
+
+    tastingNoteHTML(){
+
     }
 }
