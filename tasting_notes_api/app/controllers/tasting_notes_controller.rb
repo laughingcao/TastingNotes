@@ -36,6 +36,7 @@ class TastingNotesController < ApplicationController
   # DELETE /tasting_notes/1
   def destroy
     @tasting_note.destroy
+    render json: {message: 'Tasting Note successfully deleted'}
   end
 
   private
@@ -46,6 +47,6 @@ class TastingNotesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def tasting_note_params
-      params.require(:tasting_note.permit(:tasting_note, :spirit_id))
+      params.require(:tasting_note).permit(:tasting_note, :spirit_id)
     end
 end
