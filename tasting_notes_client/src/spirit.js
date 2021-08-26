@@ -45,4 +45,11 @@ class Spirit {
             <form>
         `
     }
+
+    handleClick = () => {
+        if (event.target.innerText === 'Delete'){
+            this.element.remove()
+            spiritService.deleteSpirit(this.id)
+        }
+    }
 }
