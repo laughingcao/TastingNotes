@@ -5,6 +5,8 @@ const spiritService = new SpiritService(base_url)
 TastingNote.tastingNoteForm.addEventListener('submit', handleSubmit)
 
 spiritService.getSpirits()
+Spirit.renderForm()
+
 tastingNoteService.getTastingNotes()
 TastingNote.renderForm()
 

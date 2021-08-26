@@ -2,6 +2,7 @@ class Spirit {
 
     static all = []
     static spiritContainer = document.getElementById("spirits-container")
+    static spiritForm = document.getElementById("form-container")
 
     constructor({id, name, abv, origin, spirit}){
         this.id = id
@@ -21,7 +22,10 @@ class Spirit {
     spiritHTML(){
         this.element.innerHTML += `
         <div>
-            <h3>${this.name}</h3>
+            <h3>name: ${this.name}</h3>
+            <h4>spirit: ${this.spirit}</h4>
+            <h4>abv: ${this.abv} % </h4> 
+            <h4>origin: ${this.origin}</h4>
         </div>
         <button id='delete-bttn'>Delete</button>
         <br>
@@ -31,5 +35,14 @@ class Spirit {
 
     slapOnDom(){
         Spirit.spiritContainer.append(this.spiritHTML())
+    }
+
+    static renderForm(){
+        Spirit.spiritForm.innerHTML += `
+        <form id="new-spirit-form">
+            Add a new bottle:<input type="text" id="spirit">
+            <input type="submit" id="create">
+            <form>
+        `
     }
 }
