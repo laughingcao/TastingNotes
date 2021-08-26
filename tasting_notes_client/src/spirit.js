@@ -14,4 +14,15 @@ class Spirit {
 
         Spirit.all.push(this)
     }
+
+    tastingNoteHTML(){
+        this.element.innerHTML += `
+        <div>
+            <h3>${this.spirit}</h3>
+        </div>
+        <button id='delete-bttn'>Delete</button>
+        <br>
+        `
+        return this.element
+    }
 }

@@ -20,7 +20,7 @@ class TastingNote {
     tastingNoteHTML(){
         this.element.innerHTML += `
         <div>
-            <h3>${this.tasting_note}</h3>
+            <h4>${this.tasting_note}</h4>
         </div>
         <button id='delete-bttn'>Delete</button>
         <br>
