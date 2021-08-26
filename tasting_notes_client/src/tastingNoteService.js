@@ -18,7 +18,7 @@ class TastingNoteService{
     createTastingNote(){
         const tastingNote = {
             tasting_note: document.getElementById('tasting_note').value,
-            spirit_id: document.getElementById('spirit_id').value
+            spirit_id: 1
         }
 
         const configObj = {
