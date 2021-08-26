@@ -1,5 +1,8 @@
 class Spirit {
+
     static all = []
+    static spiritContainer = document.getElementById("spirits-container")
+
     constructor({id, name, abv, origin, spirit}){
         this.id = id
         this.name = name
@@ -15,7 +18,7 @@ class Spirit {
         Spirit.all.push(this)
     }
 
-    tastingNoteHTML(){
+    spiritHTML(){
         this.element.innerHTML += `
         <div>
             <h3>${this.spirit}</h3>
@@ -24,5 +27,9 @@ class Spirit {
         <br>
         `
         return this.element
+    }
+
+    slapOnDom(){
+        Spirit.spiritContainer.append(this.spiritHTML())
     }
 }
