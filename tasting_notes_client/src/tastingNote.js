@@ -42,6 +42,9 @@ class TastingNote {
     }
 
     handleClick = () => {
-        
+        if (event.target.innerText === 'Delete'){
+            this.element.remove()
+            tastingNoteService.deleteTastingNote(this.id)
+        }
     }
 }
