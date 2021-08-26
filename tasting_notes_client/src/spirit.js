@@ -40,7 +40,16 @@ class Spirit {
     static renderForm(){
         Spirit.spiritForm.innerHTML += `
         <form id="new-spirit-form">
-            Add a new bottle:<input type="text" id="spirit">
+            Add a New Bottle:
+            <br>
+            name:<input type="text" id="spirit">
+            <br>
+            spirit:<input type="text" id="spirit">
+            <br>
+            abv:<input type="integer" id="spirit">
+            <br>
+            origin:<input type="text" id="spirit">
+            <br>
             <input type="submit" id="create">
             <form>
         `
