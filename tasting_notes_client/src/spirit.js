@@ -2,7 +2,7 @@ class Spirit {
 
     static all = []
     static spiritContainer = document.getElementById("spirits-container")
-    static spiritForm = document.getElementById("form-container")
+    static spiritForm = document.getElementById("spirit-form-container")
 
     constructor({id, name, abv, origin, spirit}){
         this.id = id

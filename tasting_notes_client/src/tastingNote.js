@@ -2,7 +2,7 @@ class TastingNote {
 
     static all = []
     static tastingNoteContainer = document.getElementById("tasting-notes-container")
-    static tastingNoteForm = document.getElementById("form-container")
+    static tastingNoteForm = document.getElementById("tasting-note-form-container")
 
     constructor({id, tasting_note, spirit_id}){
         this.id = id
