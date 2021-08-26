@@ -4,7 +4,7 @@ class TastingNote {
     static tastingNoteContainer = document.getElementById("tastingnotes-contrainer")
     static tastingNoteForm = document.getElementById("form-container")
 
-    constructor({id, tasting_note, spirit_id}) {
+    constructor({id, tasting_note, spirit_id}){
         this.id = id
         this.tasting_note = tasting_note
         this.spirit_id = spirit_id
@@ -12,6 +12,7 @@ class TastingNote {
         this.element = document.createElement('li')
         this.element.dataset.id = this.id
         this.element.id = `tastingNote-${this.id}`
+        this.element.addEventListener('click', this.handleClick)
 
         TastingNote.all.push(this)
     }
@@ -21,6 +22,8 @@ class TastingNote {
         <div>
             <h3>${this.tasting_note}</h3>
         </div>
+        <button id='delete-bttn'>Delete</button>
+        <br>
         `
         return this.element
     }
@@ -36,5 +39,9 @@ class TastingNote {
             Submit: <input type="submit" id="create">
             <form>
         `
+    }
+
+    handleClick = () => {
+        
     }
 }

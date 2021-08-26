@@ -4,7 +4,6 @@ const tastingNoteService = new TastingNoteService(base_url)
 TastingNote.tastingNoteForm.addEventListener('submit', handleSubmit)
 
 tastingNoteService.getTastingNotes()
-
 TastingNote.renderForm()
 
 function handleSubmit(){
