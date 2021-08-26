@@ -38,7 +38,7 @@ class TastingNoteService{
     }
 
     deleteTastingNote(id){
-        fetch(`${this.endpoint}/tasting_note/${id}`, {
+        fetch(`${this.endpoint}/tasting_notes/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
