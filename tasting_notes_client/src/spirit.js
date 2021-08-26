@@ -21,7 +21,7 @@ class Spirit {
     spiritHTML(){
         this.element.innerHTML += `
         <div>
-            <h3>${this.spirit}</h3>
+            <h3>${this.name}</h3>
         </div>
         <button id='delete-bttn'>Delete</button>
         <br>
