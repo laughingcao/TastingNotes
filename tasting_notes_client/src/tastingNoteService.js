@@ -33,7 +33,7 @@ class TastingNoteService{
         .then(resp => resp.json())
         .then(tastingNote => {
             const t = new TastingNote(tastingNote)
-            t.slapOnDom
+            t.slapOnDom()
         })
     }
 

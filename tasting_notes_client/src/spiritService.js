@@ -35,7 +35,7 @@ class SpiritService{
         .then(resp => resp.json())
         .then(spirit => {
             const s = new Spirit(spirit)
-            s.slapOnDom
+            s.slapOnDom()
         })
     }
 
