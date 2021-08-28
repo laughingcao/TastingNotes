@@ -32,11 +32,11 @@ class TastingNote {
         TastingNote.tastingNoteContainer.append(this.tastingNoteHTML())
     }
 
-    static renderForm(){
+    static renderTastingNoteForm(){
         TastingNote.tastingNoteForm.innerHTML += `
         <form id="new-tastingNote-form">
             Add a new tasting note:<input type="text" id="tasting_note">
-            <input type="submit" id="create">
+            <input type="submit" id="create-tasting-note">
             <form>
         `
     }

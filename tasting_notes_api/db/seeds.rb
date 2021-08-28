@@ -7,11 +7,20 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Spirit.create([
-        {name: "Buffalo Trace", origin: "USA", abv: "45", spirit: "Bourbon"},
-        {name: "Monkey 47", origin: "Germany", abv: "47", spirit: "Gin" },
-        {name: "Tapatio Blanco", origin: "Mexico", abv: "40", spirit: "tequila"},
+        {name: "Buffalo Trace",        
+        origin: "USA",
+        abv: "45",
+        spirit: "Bourbon"},
+        {name: "Monkey 47",
+        origin: "Germany",
+        abv: "47",
+        spirit: "Gin" },
+        {name: "Tapatio Blanco",
+        origin: "Mexico", 
+        abv: "40", 
+        spirit: "tequila"},
 ])
 
-TastingNote.create(tasting_note: 'vanilla', spirit_id: '1')
+TastingNote.create(tasting_note: 'vanilla', spirit_id: '3')
 TastingNote.create(tasting_note: 'cherry', spirit_id: '1')
-TastingNote.create(tasting_note: 'orange', spirit_id: '1')
+TastingNote.create(tasting_note: 'orange', spirit_id: '2')
