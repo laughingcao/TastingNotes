@@ -2,8 +2,8 @@ const base_url = "http://127.0.0.1:3000"
 const tastingNoteService = new TastingNoteService(base_url)
 const spiritService = new SpiritService(base_url)
 
-TastingNote.tastingNoteForm.addEventListener('submit', handleTastingNoteSubmit)
 Spirit.spiritForm.addEventListener('submit', handleSpiritSubmit)
+TastingNote.tastingNoteForm.addEventListener('submit', handleTastingNoteSubmit)
 
 spiritService.getSpirits()
 Spirit.renderSpiritForm()
@@ -19,6 +19,6 @@ function handleTastingNoteSubmit(){
 
 function handleSpiritSubmit(){
     event.preventDefault()
-    Spirit.createSpirit()
+    spiritService.createSpirit()
     event.target.reset()
 }
