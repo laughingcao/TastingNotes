@@ -42,15 +42,15 @@ class Spirit {
         <form id="new-spirit-form">
             Add a New Bottle:
             <br>
-            name:<input type="text" id="name">
+            Name:<input type="text" id="name">
             <br>
-            spirit:<input type="text" id="spirit">
+            Spirit:<input type="text" id="spirit">
             <br>
-            abv:<input type="integer" id="abv">
+            Abv:<input type="text" id="abv">
             <br>
-            origin:<input type="text" id="origin">
+            Origin:<input type="text" id="origin">
             <br>
-            <input type="submit" id="create-spirit">
+            <input type="submit" id="create">
             <form>
         `
     }

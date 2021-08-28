@@ -20,7 +20,7 @@ class SpiritService{
             name: document.getElementById('name').value,
             spirit: document.getElementById('spirit').value,
             abv: document.getElementById('abv').value,
-            origin: document.getElementById('origin').value,
+            origin: document.getElementById('origin').value
         }
 
         const configObj = {
