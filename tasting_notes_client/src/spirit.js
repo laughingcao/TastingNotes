@@ -11,6 +11,8 @@ class Spirit {
         this.origin = origin
         this.spirit_type = spirit_type
 
+        tastingNoteService.getTastingNotes(id, this.updateTastingNotes)
+
         this.element = document.createElement('li')
         this.element.dataset.id = this.id
         this.element.id = `spirit-${this.id}`
@@ -19,16 +21,32 @@ class Spirit {
         Spirit.all.push(this)
     }
 
+    updateTastingNotes = notes => {
+        const notesTarget = this.element.querySelector(".spirit-notes-list")
+        if (notesTarget) {
+            notesTarget.innerHTML = '';
+            for (const note of notes) {
+                notesTarget.appendChild(note);
+            }
+        }
+    }
+
     spiritHTML(){
         this.element.innerHTML += `
-        <div>
+        <div class="block-spirit">
+        <div class="spirit-info">
             <h3>name: ${this.name}</h3>
-            <h4>spirit: ${this.spirit_type}</h4>
+            <h4>spirit: ${this.spirit}</h4>
             <h4>abv: ${this.abv} % </h4> 
             <h4>origin: ${this.origin}</h4>
+            <p>
+                <button>Delete</button>
+            </p>
         </div>
-        <button id='delete-bttn'>Delete</button>
-        <br>
+        <div class="spirit-notes">
+            <h4>Tasting notes:</h4>
+            <ul class="spirit-notes-list"></ul>
+        </div>
         `
         return this.element
     }
@@ -51,7 +69,7 @@ class Spirit {
             Origin:<input type="text" id="origin">
             <br>
             <input type="submit" id="create">
-            <form>
+        <form>
         `
     }
 
