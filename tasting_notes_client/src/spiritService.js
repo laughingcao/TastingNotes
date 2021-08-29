@@ -18,7 +18,7 @@ class SpiritService{
     createSpirit(){
         const spirit = {
             name: document.getElementById('name').value,
-            spirit: document.getElementById('spirit').value,
+            spirit: document.getElementById('spirit_type').value,
             abv: document.getElementById('abv').value,
             origin: document.getElementById('origin').value
         }
@@ -28,7 +28,7 @@ class SpiritService{
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(spirit)
+            body: JSON.stringify(spirit),
         }
 
         fetch(`${this.endpoint}/spirits`, configObj)

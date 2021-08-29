@@ -10,15 +10,15 @@ Spirit.create([
         {name: "Buffalo Trace",        
         origin: "USA",
         abv: "45",
-        spirit: "Bourbon"},
+        spirit_type: "Bourbon"},
         {name: "Monkey 47",
         origin: "Germany",
         abv: "47",
-        spirit: "Gin" },
+        spirit_type: "Gin" },
         {name: "Tapatio Blanco",
         origin: "Mexico", 
         abv: "40", 
-        spirit: "tequila"},
+        spirit_type: "tequila"},
 ])
 
 TastingNote.create(tasting_note: 'vanilla', spirit_id: '3')

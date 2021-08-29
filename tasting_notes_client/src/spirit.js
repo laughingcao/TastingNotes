@@ -4,12 +4,12 @@ class Spirit {
     static spiritContainer = document.getElementById("spirits-container")
     static spiritForm = document.getElementById("spirit-form-container")
 
-    constructor({id, name, abv, origin, spirit}){
+    constructor({id, name, abv, origin, spirit_type}){
         this.id = id
         this.name = name
         this.abv = abv
         this.origin = origin
-        this.spirit = spirit
+        this.spirit_type = spirit_type
 
         this.element = document.createElement('li')
         this.element.dataset.id = this.id
@@ -23,7 +23,7 @@ class Spirit {
         this.element.innerHTML += `
         <div>
             <h3>name: ${this.name}</h3>
-            <h4>spirit: ${this.spirit}</h4>
+            <h4>spirit: ${this.spirit_type}</h4>
             <h4>abv: ${this.abv} % </h4> 
             <h4>origin: ${this.origin}</h4>
         </div>
@@ -44,7 +44,7 @@ class Spirit {
             <br>
             Name:<input type="text" id="name">
             <br>
-            Spirit:<input type="text" id="spirit">
+            Spirit:<input type="text" id="spirit_type">
             <br>
             Abv:<input type="number" id="abv">
             <br>
