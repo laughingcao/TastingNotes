@@ -11,14 +11,14 @@ Spirit.renderSpiritForm()
 // tastingNoteService.getTastingNotes()
 // TastingNote.renderTastingNoteForm()
 
-function handleTastingNoteSubmit(){
-    event.preventDefault()
+function handleTastingNoteSubmit(e){
+    e.preventDefault()
     tastingNoteService.createTastingNote()
-    event.target.reset()
+    e.target.reset()
 }
 
-function handleSpiritSubmit(){
-    event.preventDefault()
+function handleSpiritSubmit(e){
+    e.preventDefault()
     spiritService.createSpirit()
-    event.target.reset()
+    e.target.reset()
 }

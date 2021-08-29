@@ -1,6 +1,7 @@
 class SpiritsController < ApplicationController
   before_action :set_spirit, only: [:show, :notes, :update, :destroy]
 
+
   # GET /spirits
   def index
     @spirits = Spirit.all
@@ -52,6 +53,7 @@ class SpiritsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def spirit_params
-      params.require(:spirit).permit(:name, :spirit, :abv, :origin)
+      params.require(:spirit)
+      params.permit(:name, :spirit, :abv, :origin)
     end
 end

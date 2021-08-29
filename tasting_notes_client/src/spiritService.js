@@ -16,19 +16,18 @@ class SpiritService{
     }
 
     createSpirit(){
-        const spirit = {
-            name: document.getElementById('name').value,
-            spirit: document.getElementById('spirit').value,
-            abv: document.getElementById('abv').value,
-            origin: document.getElementById('origin').value
-        }
+        let newSpiritForm = document.getElementById('new-spirit-form');
+        let formData = new FormData(newSpiritForm);
+        var object = {};
+        formData.forEach((value, key) => object[key] = value);
+        var json = JSON.stringify(object);
 
         const configObj = {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(spirit)
+            body: json
         }
 
         fetch(`${this.endpoint}/spirits`, configObj)
