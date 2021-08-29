@@ -46,7 +46,7 @@ class Spirit {
             <br>
             Spirit:<input type="text" id="spirit_type">
             <br>
-            Abv:<input type="number" id="abv">
+            Abv:<input type="text" id="abv">
             <br>
             Origin:<input type="text" id="origin">
             <br>
