@@ -55,6 +55,7 @@ class Spirit {
     slapOnDom(){
         Spirit.spiritContainer.append(this.spiritHTML())
     }
+
     static renderSpiritForm(){
         Spirit.spiritForm.innerHTML += `
         <form id="new-spirit-form">

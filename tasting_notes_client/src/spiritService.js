@@ -28,7 +28,7 @@ class SpiritService{
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(spirit),
+            body: JSON.stringify(spirit)
         }
 
         fetch(`${this.endpoint}/spirits`, configObj)
