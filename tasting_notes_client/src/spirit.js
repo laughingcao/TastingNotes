@@ -34,18 +34,19 @@ class Spirit {
     spiritHTML(){
         this.element.innerHTML += `
         <div class="block-spirit">
-        <div class="spirit-info">
-            <h3>name: ${this.name}</h3>
-            <h4>spirit: ${this.spirit}</h4>
-            <h4>abv: ${this.abv} % </h4> 
-            <h4>origin: ${this.origin}</h4>
-            <p>
-                <button>Delete</button>
-            </p>
-        </div>
-        <div class="spirit-notes">
-            <h4>Tasting notes:</h4>
-            <ul class="spirit-notes-list"></ul>
+            <div class="spirit-info">
+                <h3>name: ${this.name}</h3>
+                <h4>spirit: ${this.spirit_type}</h4>
+                <h4>abv: ${this.abv} % </h4> 
+                <h4>origin: ${this.origin}</h4>
+                <p>
+                    <button>Delete</button>
+                </p>
+            </div>
+            <div class="spirit-notes">
+                <h4>Tasting notes:</h4>
+                <ul class="spirit-notes-list"></ul>
+            </div>
         </div>
         `
         return this.element
@@ -54,7 +55,6 @@ class Spirit {
     slapOnDom(){
         Spirit.spiritContainer.append(this.spiritHTML())
     }
-
     static renderSpiritForm(){
         Spirit.spiritForm.innerHTML += `
         <form id="new-spirit-form">
@@ -64,7 +64,7 @@ class Spirit {
             <br>
             Spirit:<input type="text" id="spirit_type">
             <br>
-            Abv:<input type="text" id="abv">
+            Abv:<input type="number" id="abv">
             <br>
             Origin:<input type="text" id="origin">
             <br>

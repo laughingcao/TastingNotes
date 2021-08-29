@@ -4,15 +4,17 @@ class TastingNoteService{
         this.endpoint = endpoint
     }
 
-    getTastingNotes(){
-        fetch(`${this.endpoint}/tasting_notes`)
+    getTastingNotes(spirit_id, callback){
+        fetch(`${this.endpoint}/notes/${spirit_id}`)
         .then(resp => resp.json())
         .then(tastingNotes => {
+            let notes = [];
             for (const tastingNote of tastingNotes) {
                 const t = new TastingNote(tastingNote)
-                t.slapOnDom()
+                notes.push(t.getTastingNote())
             }
-        }) 
+            callback(notes)
+        })
     }
 
     createTastingNote(){
