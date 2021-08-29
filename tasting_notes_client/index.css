@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+}
+
+ul {
+    padding: 0;
+    list-style: outside none;
+}
+
+button {
+    padding: 4px 12px;
+}
+
+.block-spirit {
+    border: 2px solid green;
+    margin: 0 0 20px;
+    display: flex;
+}
+
+.spirit-info {
+    padding: 20px;
+    background-color: #ffeeee;
+    flex: 1;
+}
+
+.spirit-notes {
+    padding: 20px;
+    background-color: #eeffee;
+    flex: 1;
+}
