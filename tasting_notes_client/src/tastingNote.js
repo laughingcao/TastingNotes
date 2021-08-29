@@ -1,8 +1,8 @@
 class TastingNote {
 
     static all = []
-    static tastingNoteContainer = document.getElementById("tasting-notes-container")
-    static tastingNoteForm = document.getElementById("tasting-note-form-container")
+    // static tastingNoteContainer = document.getElementById("tasting-notes-container")
+    // static tastingNoteForm = document.getElementById("tasting-note-form-container")
 
     constructor({id, tasting_note, spirit_id}){
         this.id = id
@@ -19,11 +19,8 @@ class TastingNote {
 
     tastingNoteHTML(){
         this.element.innerHTML += `
-        <div>
-            <h4>${this.tasting_note}</h4>
-        </div>
-        <button id='delete-bttn'>Delete</button>
-        <br>
+        <strong>${this.tasting_note}</strong>
+        <button>X</button>
         `
         return this.element
     }
