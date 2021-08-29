@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2021_08_19_045028) do
 
   create_table "spirits", force: :cascade do |t|
     t.string "name"
-    t.string "spirit_type"
+    t.string "spirit"
     t.integer "abv"
     t.string "origin"
     t.datetime "created_at", precision: 6, null: false

@@ -18,7 +18,7 @@ class SpiritService{
     createSpirit(){
         const spirit = {
             name: document.getElementById('name').value,
-            spirit: document.getElementById('spirit_type').value,
+            spirit: document.getElementById('spirit').value,
             abv: document.getElementById('abv').value,
             origin: document.getElementById('origin').value
         }

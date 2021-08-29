@@ -4,12 +4,12 @@ class Spirit {
     static spiritContainer = document.getElementById("spirits-container")
     static spiritForm = document.getElementById("spirit-form-container")
 
-    constructor({id, name, abv, origin, spirit_type}){
+    constructor({id, name, abv, origin, spirit}){
         this.id = id
         this.name = name
         this.abv = abv
         this.origin = origin
-        this.spirit_type = spirit_type
+        this.spirit = spirit
 
         tastingNoteService.getTastingNotes(id, this.updateTastingNotes)
 
@@ -36,7 +36,7 @@ class Spirit {
         <div class="block-spirit">
             <div class="spirit-info">
                 <h3>name: ${this.name}</h3>
-                <h4>spirit: ${this.spirit_type}</h4>
+                <h4>spirit: ${this.spirit}</h4>
                 <h4>abv: ${this.abv} % </h4> 
                 <h4>origin: ${this.origin}</h4>
                 <p>
@@ -63,7 +63,7 @@ class Spirit {
             <br>
             Name:<input type="text" id="name">
             <br>
-            Spirit:<input type="text" id="spirit_type">
+            Spirit:<input type="text" id="spirit">
             <br>
             Abv:<input type="number" id="abv">
             <br>
