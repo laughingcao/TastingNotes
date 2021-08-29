@@ -1,5 +1,5 @@
 class SpiritsController < ApplicationController
-  before_action :set_spirit, only: [:show, :update, :destroy]
+  before_action :set_spirit, only: [:show, :notes, :update, :destroy]
 
   # GET /spirits
   def index
@@ -11,6 +11,11 @@ class SpiritsController < ApplicationController
   # GET /spirits/1
   def show
     render json: @spirit
+  end
+
+  # GET /notes/1
+  def notes
+    render json: @spirit.tasting_notes
   end
 
   # POST /spirits
