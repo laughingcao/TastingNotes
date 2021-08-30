@@ -46,16 +46,6 @@ class Spirit {
             <div class="spirit-notes">
                 <h4>Tasting notes:</h4>
                 <ul class="spirit-notes-list"></ul>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <form id="new-tastingNote-form">
-                Add a new tasting note:
-                <input type="text" name="tasting_note">
-                <input type="submit" >
-            </form>
             </div>
         </div>
         `

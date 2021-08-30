@@ -42,7 +42,7 @@ class SpiritsController < ApplicationController
   # DELETE /spirits/1
   def destroy
     @spirit.destroy
-    render json: {message: 'Spirit successfully deleted'}
+    render json: {message: "#{@spirit.name} was successfully deleted"}
   end
 
   private

@@ -36,7 +36,7 @@ class TastingNotesController < ApplicationController
   # DELETE /tasting_notes/1
   def destroy
     @tasting_note.destroy
-    render json: {message: 'Tasting Note successfully deleted'}
+    render json: {message: "#{@tasting_note.tasting_note} was successfully deleted"}
   end
 
   private
