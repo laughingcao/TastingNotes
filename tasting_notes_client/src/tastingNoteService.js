@@ -18,18 +18,17 @@ class TastingNoteService{
     }
 
     createTastingNote(){
-        let newTastingNoteForm = document.getElementById('new-tastingNote-form');
-        let formData = new FormData(newTastingNoteForm);
-        var object = {};
-        formData.forEach((value, key) => object[key] = value);
-        var json = JSON.stringify(object);
+        const tastingNote = {
+            tasting_note: document.getElementById('tasting_note').value,
+            spirit_id: 1
+        }
 
         const configObj = {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: json
+            body: JSON.stringify(tastingNote)
         }
 
         fetch(`${this.endpoint}/tasting_notes`, configObj)

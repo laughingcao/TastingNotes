@@ -2,7 +2,7 @@ class TastingNote {
 
     static all = []
     // static tastingNoteContainer = document.getElementById("tasting-notes-container")
-    static tastingNoteForm = document.getElementById("tasting-notes-container")
+    static tastingNoteForm = document.getElementById("tasting-note-form-container")
 
     constructor({id, tasting_note, spirit_id}){
         this.id = id
@@ -21,18 +21,6 @@ class TastingNote {
         this.element.innerHTML += `
         <strong>${this.tasting_note}</strong>
         <button>X</button>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <form id="new-tastingNote-form">
-                Add a new tasting note:
-                <input type="text" name="tasting_note">
-                <input type="submit" >
-        </form>
         `
         return this.element
     }
@@ -45,15 +33,16 @@ class TastingNote {
         return this.tastingNoteHTML()
     }
 
-    // static renderTastingNoteForm(){
-    //     TastingNote.tastingNoteForm.innerHTML += `
-    //     <form id="new-tastingNote-form">
-    //         Add a new tasting note:
-    //         <input type="text" id="tasting_note">
-    //         <input type="submit" id="create">
-    //     </form>
-    //     `
-    // }
+    static renderTastingNoteForm(){
+       document.getElementsByClassName("spirit-notes").innerHTML += `
+        <form id="new-tastingNote-form">
+            Add a new tasting note:
+            <input type="text" name="tasting_note">
+            <input type="submit" id="create-tasting-note">
+        </form>
+        `
+        return  document.getElementsByClassName("spirit-notes")
+    }
 
     handleClick = () => {
         if (event.target.innerText === 'X'){
