@@ -17,10 +17,11 @@ class TastingNoteService{
         })
     }
 
-    createTastingNote(){
+    createTastingNote(spirit_id){
+        event.preventDefault()
         const tastingNote = {
-            tasting_note: document.getElementById('tasting_note').value,
-            spirit_id: 1
+            tasting_note: document.getElementById('tasting-note-name').value,
+            spirit_id: document.getElementById(`data-id-${spirit_id}`).value
         }
 
         const configObj = {
