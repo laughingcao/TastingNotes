@@ -4,6 +4,6 @@ class Spirit < ApplicationRecord
     validates :name, presence: true
     validates :name, uniqueness: true
     validates :abv, presence: true
-    validates :orign, presence: true
+    validates :origin, presence: true
     validates :spirit, presence: true
 end

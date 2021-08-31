@@ -48,8 +48,8 @@ class Spirit {
                 <ul class="spirit-notes-list"></ul>
             </div>
         </div>
-        </form>
-        <form action="${base_url}/tasting_notes" method="post" id="new-tastingNote-form">
+        <form>
+        <form action="${base_url}/tasting_notes" method="post" >
             Add a new tasting note to ${this.name}:
             <input type="text" name="tasting_note">
             <input type="hidden" name="spirit_id" value=${this.id}>

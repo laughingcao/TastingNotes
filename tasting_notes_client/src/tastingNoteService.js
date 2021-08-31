@@ -40,6 +40,12 @@ class TastingNoteService{
         })
     }
 
+    handleTastingNoteSubmit(e){
+        e.preventDefault()
+        tastingNoteService.createTastingNote()
+        e.target.reset()
+    }
+
     deleteTastingNote(id){
         fetch(`${this.endpoint}/tasting_notes/${id}`, {
             method: 'DELETE',

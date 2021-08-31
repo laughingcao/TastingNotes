@@ -3,16 +3,9 @@ const tastingNoteService = new TastingNoteService(base_url)
 const spiritService = new SpiritService(base_url)
 
 Spirit.spiritForm.addEventListener('submit', handleSpiritSubmit)
-// TastingNote.tastingNoteForm.addEventListener('submit', handleTastingNoteSubmit)
 
 spiritService.getSpirits()
 Spirit.renderSpiritForm()
-
-function handleTastingNoteSubmit(e){
-    e.preventDefault()
-    tastingNoteService.createTastingNote()
-    e.target.reset()
-}
 
 function handleSpiritSubmit(e){
     e.preventDefault()

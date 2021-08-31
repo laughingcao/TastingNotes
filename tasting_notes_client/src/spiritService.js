@@ -15,7 +15,8 @@ class SpiritService{
         }) 
     }
 
-    createSpirit(){
+    createSpirit(e){
+        e.preventDefault()
         let newSpiritForm = document.getElementById('new-spirit-form');
         let formData = new FormData(newSpiritForm);
         var object = {};

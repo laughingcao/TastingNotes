@@ -14,11 +14,11 @@ Spirit.create([
         {name: "Monkey 47",
         origin: "Germany",
         abv: "47",
-        spirit: "Gin" },
+        spirit: "Gin"},
         {name: "Tapatio Blanco",
         origin: "Mexico", 
         abv: "40", 
-        spirit: "tequila"},
+        spirit: "tequila"}
 ])
 
 TastingNote.create(tasting_note: 'vanilla', spirit_id: '3')
