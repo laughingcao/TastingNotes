@@ -2,7 +2,7 @@ class TastingNote {
 
     static all = []
     // static tastingNoteContainer = document.getElementById("tasting-notes-container")
-    static tastingNoteForm = document.getElementsByClassName("spirit-notes")
+    static tastingNoteForm = document.getElementsByClassName("spirits-container")
 
     constructor({id, tasting_note, spirit_id}){
         this.id = id
@@ -25,9 +25,9 @@ class TastingNote {
         return this.element
     }
 
-    // slapOnDom(){
-    //     TastingNote.tastingNoteContainer.append(this.tastingNoteHTML())
-    // }
+    slapOnDom(){
+        TastingNote.tastingNoteForm.append(this.tastingNoteHTML())
+    }
 
     getTastingNote(){
         return this.tastingNoteHTML()
