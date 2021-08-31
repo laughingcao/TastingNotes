@@ -21,7 +21,7 @@ class TastingNoteService{
         event.preventDefault()
         const tastingNote = {
             tasting_note: document.getElementById('tasting-note-name').value,
-            spirit_id: document.getElementById(`data-id-${spirit_id}`).value
+            spirit_id: document.getElementById('block-spirit.data-id').value
         }
 
         const configObj = {

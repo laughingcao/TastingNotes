@@ -9,7 +9,7 @@ spiritService.getSpirits()
 Spirit.renderSpiritForm()
 
 // tastingNoteService.getTastingNotes()
-TastingNote.renderTastingNoteForm()
+// TastingNote.renderTastingNoteForm()
 
 function handleTastingNoteSubmit(e){
     e.preventDefault()
