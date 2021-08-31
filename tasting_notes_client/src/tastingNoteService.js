@@ -17,9 +17,9 @@ class TastingNoteService{
         })
     }
 
-    createTastingNote(){
-        let newTastingNoteForm = document.getElementById('new-tastingNote-form');
-        let formData = new FormData(newTastingNoteForm);
+    createTastingNote(form){
+        // serialize and send form data for #create
+        let formData = new FormData(form);
         var object = {};
         formData.forEach((value, key) => object[key] = value);
         var json = JSON.stringify(object);
@@ -31,19 +31,17 @@ class TastingNoteService{
             },
             body: json
         }
+        // find the container where the new Tasting Note will go
+        const container = form.previousElementSibling.querySelector('.spirit-notes-list');
 
+        // hit the api; create the Tasting Note; add to dom
         fetch(`${this.endpoint}/tasting_notes`, configObj)
         .then(resp => resp.json())
         .then(tasting_note => {
             const t = new TastingNote(tasting_note)
-            t.slapOnDom()
+            t.slapOnDom(container)
+            form.reset();
         })
-    }
-
-    handleTastingNoteSubmit(e){
-        e.preventDefault()
-        tastingNoteService.createTastingNote()
-        e.target.reset()
     }
 
     deleteTastingNote(id){
