@@ -3,7 +3,7 @@ class Spirit {
     static all = []
     static spiritContainer = document.getElementById("spirits-container")
     static spiritForm = document.getElementById("spirit-form-container")
-
+ 
     constructor({id, name, abv, origin, spirit}){
         this.id = id
         this.name = name
@@ -20,7 +20,7 @@ class Spirit {
 
         Spirit.all.push(this)
     }
-
+ 
     updateTastingNotes = notes => {
         const notesTarget = this.element.querySelector(".spirit-notes-list")
         if (notesTarget) {
@@ -48,13 +48,24 @@ class Spirit {
                 <ul class="spirit-notes-list"></ul>
             </div>
         </div>
-        <form action="${base_url}/tasting_notes" method="post" id="new-tastingNote-form">
+        </form>
+        <form action="${base_url}/tasting_notes" method="post" data-remote="true" id="new-tastingNote-form">
             Add a new tasting note to ${this.name}:
             <input type="text" name="tasting_note">
             <input type="hidden" name="spirit_id" value=${this.id}>
             <input type="submit">
         <form>
         `
+        $('#new-tastingNote-form').submit(function(e) {
+            e.preventDefault();
+            $.post(
+                $(this).attr('${base_url/tasting_notes'), 
+                $(this).serialize(),
+                function(result) {
+                    
+                }
+            );
+        });
         return this.element
     }
 

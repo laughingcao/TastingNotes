@@ -8,9 +8,6 @@ Spirit.spiritForm.addEventListener('submit', handleSpiritSubmit)
 spiritService.getSpirits()
 Spirit.renderSpiritForm()
 
-// tastingNoteService.getTastingNotes()
-// TastingNote.renderTastingNoteForm()
-
 function handleTastingNoteSubmit(e){
     e.preventDefault()
     tastingNoteService.createTastingNote()
