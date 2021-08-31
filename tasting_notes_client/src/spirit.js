@@ -31,7 +31,7 @@ class Spirit {
         }
     }
 
-    spiritHTML(){
+    spiritHTML(spirit_id){
         this.element.innerHTML += `
         <div class="block-spirit">
             <div class="spirit-info">
@@ -48,6 +48,12 @@ class Spirit {
                 <ul class="spirit-notes-list"></ul>
             </div>
         </div>
+        <form id="new-tastingNote-form">
+        Add a new tasting note to ${this.name}:
+        <input type="text" name="tasting_note">
+        <input type="hidden" name="spirit_id" value=${this.id} />
+        <input type="submit" >
+    </form>
         `
         return this.element
     }
