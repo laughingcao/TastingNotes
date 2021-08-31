@@ -32,8 +32,9 @@ class Spirit {
     }
 
     spiritHTML(){
-        this.element.innerHTML += `
-        <div class="block-spirit">
+        const body = document.createElement('div');
+        body.classList.add('block-spirit');
+        body.innerHTML = `
             <div class="spirit-info">
                 <h3>name: ${this.name}</h3>
                 <h4>spirit: ${this.spirit}</h4>
@@ -47,16 +48,26 @@ class Spirit {
                 <h4>Tasting notes:</h4>
                 <ul class="spirit-notes-list"></ul>
             </div>
-        </div>
-        <form>
-        <form action="${base_url}/tasting_notes" method="post" >
+        `;
+
+        const form = document.createElement('form');
+        form.setAttribute('method', 'post');
+        form.setAttribute('action', `${base_url}/tasting_notes`);
+        form.innerHTML = `
             Add a new tasting note to ${this.name}:
             <input type="text" name="tasting_note">
             <input type="hidden" name="spirit_id" value=${this.id}>
             <input type="submit">
-        <form>
-        `
-        return this.element
+        `;
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            tastingNoteService.createTastingNote(form);
+        });
+
+        this.element.appendChild(body);
+        this.element.appendChild(form);
+
+        return this.element;
     }
 
     slapOnDom(){
