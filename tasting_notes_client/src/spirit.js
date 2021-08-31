@@ -49,23 +49,13 @@ class Spirit {
             </div>
         </div>
         </form>
-        <form action="${base_url}/tasting_notes" method="post" data-remote="true" id="new-tastingNote-form">
+        <form action="${base_url}/tasting_notes" method="post" id="new-tastingNote-form">
             Add a new tasting note to ${this.name}:
             <input type="text" name="tasting_note">
             <input type="hidden" name="spirit_id" value=${this.id}>
             <input type="submit">
         <form>
         `
-        $('#new-tastingNote-form').submit(function(e) {
-            e.preventDefault();
-            $.post(
-                $(this).attr('${base_url/tasting_notes'), 
-                $(this).serialize(),
-                function(result) {
-                    
-                }
-            );
-        });
         return this.element
     }
 
