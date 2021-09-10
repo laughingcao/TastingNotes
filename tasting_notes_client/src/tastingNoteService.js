@@ -20,9 +20,9 @@ class TastingNoteService{
     createTastingNote(form){
         // serialize and send form data for #create
         let formData = new FormData(form);
-        var object = {};
+        const object = {};
         formData.forEach((value, key) => object[key] = value);
-        var json = JSON.stringify(object);
+        const json = JSON.stringify(object);
 
         const configObj = {
             method: 'POST',

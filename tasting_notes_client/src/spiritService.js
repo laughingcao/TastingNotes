@@ -18,9 +18,9 @@ class SpiritService{
     createSpirit(){
         let newSpiritForm = document.getElementById('new-spirit-form');
         let formData = new FormData(newSpiritForm);
-        var object = {};
+        const object = {};
         formData.forEach((value, key) => object[key] = value);
-        var json = JSON.stringify(object);
+        const json = JSON.stringify(object);
 
         const configObj = {
             method: 'POST',
