@@ -12,9 +12,9 @@ class SpiritService{
                 const s = new Spirit(spirit)
                 s.slapOnDom()
             }
-        }) 
+        })
     }
-
+ 
     createSpirit(){
         let newSpiritForm = document.getElementById('new-spirit-form');
         let formData = new FormData(newSpiritForm);

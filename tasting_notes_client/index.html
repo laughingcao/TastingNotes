@@ -10,9 +10,17 @@
     <h1>Welcome to Tasting Notes</h1>
     <h2>where you can view and add tasting notes to different spirits</h2>
 
+    <label>Choose how to sort spirits:
+        <select class="spirits" name="spirits-name">
+          <option value="">Select One …</option>
+          <option value="Alphabetically">Alphabetically By Name</option>
+        </select>
+      </label>
+      <div class="result"></div>
+
     <ul id="spirits-container">  </ul>
     <div id="spirit-form-container"></div>
-
+    
     <script src="src/tastingNote.js"></script>
     <script src="src/tastingNoteService.js"></script>
     <script src="src/spirit.js"></script>

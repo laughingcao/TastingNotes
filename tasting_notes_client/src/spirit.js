@@ -3,6 +3,7 @@ class Spirit {
     static all = []
     static spiritContainer = document.getElementById("spirits-container")
     static spiritForm = document.getElementById("spirit-form-container")
+    static sortButton = document.getElementById("sort-button")
  
     constructor({id, name, abv, origin, spirit}){
         this.id = id
@@ -90,6 +91,22 @@ class Spirit {
             <input type="submit">
         <form>
         `
+    }
+
+    sortSpirits() {
+        const selectElement = document.querySelector('.spirits')
+        selectElement.addEventListener('change', getSortedSpirits())
+    }
+
+    getSortedSpirits(){
+        fetch(`${this.endpoint}/spirits`)
+        .then(resp => resp.json())
+        .then(spirits => {
+            for (const spirit of spirits) {
+                const s = new Spirit(spirit).sort((a, b) => (a.name > b.name ? 1 : -1 ))
+                s.slapOnDom()
+            }
+        })
     }
 
     handleClick = () => {
