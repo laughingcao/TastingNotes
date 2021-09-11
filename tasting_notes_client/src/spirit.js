@@ -97,10 +97,12 @@ class Spirit {
         fetch("http://127.0.0.1:3000/spirits")
         .then(resp => resp.json())
         .then(spirits => {
-                const s = spirits.sort((a, b) => (a.name > b.name ? 1 : -1 ))
+            for  (const spirit of spirits.sort((a, b) => (a.name > b.name ? 1 : -1 ))) {
+                const s = new Spirit(spirit)
                 s.slapOnDom()
             }
-        )}
+        })
+    }
 
 
     handleClick = () => {
