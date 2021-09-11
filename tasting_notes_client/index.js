@@ -12,3 +12,6 @@ function handleSpiritSubmit(e){
     spiritService.createSpirit()
     e.target.reset()
 }
+
+const selectElement = document.querySelector('.spirits')
+selectElement.addEventListener('change', Spirit.getSortedSpirits())

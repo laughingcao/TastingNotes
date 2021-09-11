@@ -93,21 +93,15 @@ class Spirit {
         `
     }
 
-    sortSpirits() {
-        const selectElement = document.querySelector('.spirits')
-        selectElement.addEventListener('change', getSortedSpirits())
-    }
-
-    getSortedSpirits(){
-        fetch(`${this.endpoint}/spirits`)
+   static getSortedSpirits(){
+        fetch("http://127.0.0.1:3000/spirits")
         .then(resp => resp.json())
         .then(spirits => {
-            for (const spirit of spirits) {
-                const s = new Spirit(spirit).sort((a, b) => (a.name > b.name ? 1 : -1 ))
+                const s = spirits.sort((a, b) => (a.name > b.name ? 1 : -1 ))
                 s.slapOnDom()
             }
-        })
-    }
+        )}
+
 
     handleClick = () => {
         if (event.target.innerText === 'Delete'){
