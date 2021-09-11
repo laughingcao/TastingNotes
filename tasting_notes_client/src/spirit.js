@@ -93,17 +93,16 @@ class Spirit {
         `
     }
 
-   static getSortedSpirits(){
-        fetch("http://127.0.0.1:3000/spirits")
-        .then(resp => resp.json())
-        .then(spirits => {
-            for  (const spirit of spirits.sort((a, b) => (a.name > b.name ? 1 : -1 ))) {
-                const s = new Spirit(spirit)
-                s.slapOnDom()
-            }
-        })
-    }
-
+    // getSortedSpirits(){
+    //     fetch("http://127.0.0.1:3000/spirits")
+    //     .then(resp => resp.json())
+    //     .then(spirits => {
+    //         for (const spirit of spirits.sort((a, b) => (a.name > b.name ? 1 : -1 ))) {
+    //             const s = new Spirit(spirit)
+    //             s.slapOnDom()
+    //         }
+    //     })
+    // }
 
     handleClick = () => {
         if (event.target.innerText === 'Delete'){

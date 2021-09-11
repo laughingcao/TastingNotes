@@ -37,6 +37,7 @@ class SpiritService{
             s.slapOnDom()
         })
     }
+    
 
     deleteSpirit(id){
         fetch(`${this.endpoint}/spirits/${id}`, {

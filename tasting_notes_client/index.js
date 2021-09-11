@@ -13,5 +13,14 @@ function handleSpiritSubmit(e){
     e.target.reset()
 }
 
-const selectElement = document.querySelector('.spirits')
-selectElement.addEventListener('change', Spirit.getSortedSpirits())
+document.getElementById('sort').onclick = function changeContent() {
+        Spirit.spiritContainer.innerHTML = ""
+        fetch("http://127.0.0.1:3000/spirits")
+        .then(resp => resp.json())
+        .then(spirits => {
+            for (const spirit of spirits.sort((a, b) => (a.name > b.name ? 1 : -1 ))) {
+                const s = new Spirit(spirit)
+                s.slapOnDom()
+            }
+        })
+    }
